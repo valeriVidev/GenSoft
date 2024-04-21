@@ -64,9 +64,6 @@ jobs:
         working-directory: Frontend
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v3
-        with:
-          browser: chrome
-          record: true
-          config-file: cypress.config.js
-          headless: true
+        run: |
+          cd Frontend
+          npx cypress run --browser chrome --record --config-file cypress.config.js --headless
