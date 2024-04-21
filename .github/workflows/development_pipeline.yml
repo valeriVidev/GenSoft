@@ -44,7 +44,7 @@ jobs:
             -Dsonar.projectKey=valeriVidev_GenSoft
             -Dsonar.organization=gensoft
   
-  Cypress_end_to_end:
+  Cypress_end-to-end:
     runs-on: ubuntu-latest
 
     env:
