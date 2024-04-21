@@ -20,8 +20,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd Frontend
-    - run: npm ci
+    - run: |
+          cd Frontend
+          npm ci
     - run: npm run build --if-present
 
   SonarCloud_analysis:
@@ -49,8 +50,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: cd Frontend
-        run: npm ci
+        run: |
+          cd Frontend
+          npm ci
       
       - name: Run Cypress tests
         uses: cypress-io/github-action@v3
