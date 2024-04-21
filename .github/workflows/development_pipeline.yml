@@ -72,3 +72,4 @@ jobs:
           record: true
           config-file: cypress.config.js
           headless: true
+        working-directory: Frontend
